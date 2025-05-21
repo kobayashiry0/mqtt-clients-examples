@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MQTT.js Web Client</title>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+  <h2>MQTT Web Client</h2>
+
+  <input type="text" id="msg" placeholder="Enter message">
+  <button onclick="sendMessage()">Send</button>
+
+  <pre id="log"></pre>
+
+  <script>
+    const client = mqtt.connect('ws://localhost:9001', {clientId: 'javascript_'+Math.random().toString(16).substring(2, 10)}); // 9001: WebSocket対応のポート
+    const subscribeTopic = 'topicB';
+    const publishTopic = 'topicA';
+
+    client.on('connect', () => {
+      log('Connected');
+      client.subscribe(subscribeTopic , (err) => {
+        if (err) log('Subscribe error: ' + err);
+        else log('Subscribed to topicB');
+      });
+    });
+
+    client.on('message', (topic, message) => {
+      log(`Received [${topic}]: ${message.toString()}`);
+    });
+
+    function sendMessage() {
+      const text = document.getElementById('msg').value;
+      client.publish(publishTopic, text);
+      log(`Published to ${publishTopic}: ${text}`);
+      document.getElementById('msg').value = '';
+    }
+
+    function log(msg) {
+      document.getElementById('log').textContent += msg + '\n';
+    }
+  </script>
+</body>
+</html>
