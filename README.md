@@ -2,9 +2,7 @@
 
 このリポジトリは、**Mosquitto** をブローカーとして使用し、**Python（paho-mqtt）** と **HTML + JavaScript（mqtt.js）** を使って MQTT 通信を始めるためのガイドです。
 
----
-
-## 📚 目次
+## Table of Contents
 
 - [動作環境](#動作環境)
 - [Mosquitto](#mosquitto)
@@ -12,53 +10,56 @@
   - [起動方法](#起動方法)
 - [Python（paho-mqtt）](#pythonpaho-mqtt)
   - [インストール方法](#インストール方法-1)
+  - [実行方法](#実行方法)
   - [バージョン情報](#バージョン情報)
 - [HTML + JavaScript（mqtt.js）](#html--javascriptmqttjs)
 
----
+## 動作環境
 
-## 💻 動作環境
-
-- MacBook Air  
+- MacBook Air
+- macOS Sequoia 15.5
 - Apple M3  
 - 16GB RAM  
 
----
-
-## 🐝 Mosquitto
+## Mosquitto
 
 ### インストール方法
 
-```bash
+```zsh
 brew install mosquitto
 ````
+バージョン2.0.21
 
 ### 起動方法
 
-```bash
+```zsh
 mosquitto
 ```
 
-※ デフォルトではポート `1883` でブローカーが起動します。
+※ デフォルトではポート `1883` でブローカーが起動する。
 
----
-
-## 🐍 Python（paho-mqtt）
+## Python（paho-mqtt）
 
 ### インストール方法
 
-```bash
+```zsh
 pip3 install paho-mqtt
 ```
 
+### 実行方法
+```zsh
+python3 example.py
+```
+topicAをsubscribeし、publishするときは、topicBで送信する。
+
 ### バージョン情報
 
-| ライブラリ/ツール | バージョン  |
+| library/tool | version  |
 | --------- | ------ |
 | Python    | 3.12.7 |
 | pip       | 24.2   |
 | paho-mqtt | 2.1.0  |
 
----
-
 ## HTML + JavaScript（mqtt.js）
+ブラウザでexample.htmlを開く。
+topicBをsubscribeし、publishするときは、topicAで送信する（Pythonの逆）。
