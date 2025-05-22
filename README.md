@@ -83,9 +83,7 @@ python3 example.py
 
 ## HTML + JavaScript（mqtt.js）
 ### How to Run
-```zsh
 ブラウザでexample.htmlを開きます。
-```
 * subscribe: `topicB`
 * publish: `topicA`
 pythonの例と逆になっています。
