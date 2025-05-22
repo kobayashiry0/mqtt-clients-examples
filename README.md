@@ -17,6 +17,7 @@
   - [How to Run](#how-to-run)
 - [HTML + JavaScript（mqtt.js）](#html--javascriptmqttjs)
   - [How to Run](#how-to-run-1)
+- [References](#references)
 
 ## Environment
 - OS: macOS Sequoia 15.5 
@@ -87,3 +88,9 @@ python3 example.py
 * subscribe: `topicB`
 * publish: `topicA`
 pythonの例と逆になっています。
+
+## References
+- [MQTT](https://mqtt.org/)
+- [Mosquitto](https://mosquitto.org/)
+- [paho-mqtt](https://pypi.org/project/paho-mqtt/)
+- [mqtt.js](https://github.com/mqttjs)
