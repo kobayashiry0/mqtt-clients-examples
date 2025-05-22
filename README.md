@@ -1,5 +1,5 @@
 # MQTT Clients Examples
-![mqtt-image]([https://github.com/kobayashiry0/mqtt-clients-examples/blob/main/images/mqttexample.png](https://raw.githubusercontent.com/kobayashiry0/mqtt-clients-examples/refs/heads/main/images/mqttexample.png))
+![mqtt-image](https://raw.githubusercontent.com/kobayashiry0/mqtt-clients-examples/refs/heads/main/images/mqttexample.png))
 
 このリポジトリは、**Mosquitto** をブローカーとして使用し、**Python（paho-mqtt）** と **HTML + JavaScript（mqtt.js）** を使って MQTT 通信を始めるためのガイドです。
 
