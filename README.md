@@ -5,7 +5,7 @@
 
 ## Table of Contents
 
-- [動作環境](#動作環境)
+- [Environment](#environment)
 - [Mosquitto](#mosquitto)
   - [Installation](#installation)
   - [Usage](#usage-1)
@@ -48,9 +48,9 @@ mosquitto
 
 ※ デフォルトではポート `1883` でMQTT over TCPが起動します。
 
-::: note
-セキュリティ上、ブラウザでMQTT over TCPは通信できないため、MQTT over WebSocketを使用する必要があります。
-:::
+> [!Warning]
+> セキュリティ上、ブラウザでMQTT over TCPは通信できないため、MQTT over WebSocketを使用する必要があります。
+
 
 #### Starting MQTT over WebSocket
 ```zsh
@@ -85,6 +85,7 @@ python3 example.py
 ### How to Run
 ```zsh
 ブラウザでexample.htmlを開きます。
+```
 * subscribe: `topicB`
 * publish: `topicA`
 pythonの例と逆になっています。
