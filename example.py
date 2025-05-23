@@ -17,7 +17,7 @@ def generate_random_client_id(prefix="python_", length=8):
 # callback関数: 接続時
 def on_connect(client, userdata, flags, rc, prop):
     print("connected")
-    
+
 # callback関数: 切断時
 def on_disconnect(client, userdata, flags, rc, prop):
     print("disconnected")
